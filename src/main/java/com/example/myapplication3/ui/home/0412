@@ -1,0 +1,327 @@
+        view.findViewById<Button>(R.id.task_button).setOnClickListener {
+            val options = arrayOf("1小时", "2小时", "3小时")
+            val scores = arrayOf(10, 20, 30)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("任务")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 -> {
+                            incrementClickCount(option1ClickCount)  // 更新 option1 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+                        }
+                        1 -> {
+                            incrementClickCount(option2ClickCount)  // 更新 option2 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+
+                        }
+                        2 -> {
+                            incrementClickCount(option3ClickCount)  // 更新 option3 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+
+                        }
+                        3 -> {
+                            // 更新多个选项和 taskClickCount
+                            incrementClickCount(option1ClickCount)
+                            incrementClickCount(option2ClickCount)
+                            incrementClickCount(option3ClickCount)
+                            incrementClickCount(taskClickCount)  // 更新 taskClickCount 的点击次数
+
+                        }
+                    }
+
+                }
+                .show()
+        }
+        view.findViewById<Button>(R.id.course_button).setOnClickListener {
+            val options = arrayOf("数学", "英语", "计算机","小语种")
+            val scores = arrayOf(10, 10, 10)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("课程")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 -> {incrementClickCount(mathClickCount)}
+                        1 -> {
+                            incrementClickCount(english_courseClickCount)
+                            incrementClickCount(englishClickCount)
+                        }
+                        2 -> {incrementClickCount(computer_courseClickCount)
+                            incrementClickCount(codeClickCount)
+                        }
+                        3 -> {
+                            incrementClickCount(language_ClickCount)
+                        }
+                    }
+                }
+                .show()
+
+        }
+        view.findViewById<Button>(R.id.code_button).setOnClickListener {
+            val options = arrayOf("CODE", "LEECODE")
+            val scores = arrayOf(10, 10)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("代码")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 -> {incrementClickCount(codeClickCount)
+                            incrementClickCount(webClickCount)
+                        }
+                        1 -> {incrementClickCount(leetClickCount)
+                            incrementClickCount(codeClickCount)
+                        }
+
+                    }
+                }
+                .show()
+        }
+
+        view.findViewById<Button>(R.id.skill_button).setOnClickListener {
+            val options = arrayOf("中医", "手语", "剪辑", "PS", "沟通", "绘画")
+            val scores = arrayOf(10, 10, 10, 10, 10, 10)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("技能")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    when (which) {
+                        0 -> {incrementClickCount("chinese_medicine_click_count")
+                            incrementClickCount("skill_click_count")
+                        }
+                        1 -> {incrementClickCount("sign_language_click_count")
+                            incrementClickCount("skill_click_count")
+                        }
+                        2 -> {incrementClickCount("editing_click_count")
+                            incrementClickCount("skill_click_count")
+                        }
+                        3 -> {incrementClickCount("photoshop_click_count")
+                            incrementClickCount("skill_click_count")
+                        }
+                        4 -> {incrementClickCount("communication_click_count")
+                            incrementClickCount("skill_click_count")
+
+                        }
+                        5 -> {incrementClickCount("painting_click_count")
+                            incrementClickCount("skill_click_count")
+                        }
+                    }
+                }
+                .show()
+        }
+        view.findViewById<Button>(R.id.review_button).setOnClickListener {
+            val options = arrayOf("英文", "中文")
+            val scores = arrayOf(10, 10)
+            AlertDialog.Builder(requireContext())
+                .setTitle("背诵")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 ->
+                        {
+                            incrementClickCount("english_recite_click_count")  // 英文
+                            incrementClickCount("english_count")
+                        }
+                        1 ->{
+                            incrementClickCount("chinese_recite_click_count")  // 中文
+                        }
+                    }
+                }
+                .show()
+        }
+        view.findViewById<Button>(R.id.schedule_button).setOnClickListener {
+            val options = arrayOf("早起", "早睡", "收拾东西", "洗澡")
+            val scores = arrayOf(10, 10, 5, 5)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("作息")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 ->{
+                            incrementClickCount("zuoxi_click_count")
+                            incrementClickCount("wake_up_click_count")  // 早起
+                        }
+
+
+                        1 -> {
+                            incrementClickCount("zuoxi_click_count")
+                        incrementClickCount("sleep_early_click_count")  // 早睡
+                    }
+                        2 -> {
+                            incrementClickCount("zuoxi_click_count")
+                        incrementClickCount("tidy_up_click_count")  // 收拾东西
+                    }
+                        3 -> {
+                        incrementClickCount("shower_click_count")  // 洗澡
+                            incrementClickCount("zuoxi_click_count")
+                    }
+                    }
+                }
+                .show()
+        }
+        view.findViewById<Button>(R.id.exercise_button).setOnClickListener {
+            val options = arrayOf("八段锦", "跑步", "游泳", "球类", "健身")
+            val scores = arrayOf(10, 10, 10, 10, 10)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("运动")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 ->{
+                            incrementClickCount("ba_duan_jin_click_count")  // 八段锦
+                            incrementClickCount("yundong_click_count")
+                        }
+
+                        1 -> {
+                        incrementClickCount("running_click_count")  // 跑步
+                            incrementClickCount("yundong_click_count")
+                        }
+                        2 -> {
+                        incrementClickCount("swimming_click_count")  // 游泳
+                            incrementClickCount("yundong_click_count")
+                        }
+                        3 -> {
+                        incrementClickCount("ball_games_click_count")  // 球类
+                            incrementClickCount("yundong_click_count")
+                        }
+                        4 -> {
+                            incrementClickCount("fitness_click_count")  // 健身
+                            incrementClickCount("yundong_click_count")
+                        }
+                    }
+                }
+                .show()
+        }
+
+        view.findViewById<Button>(R.id.writing_button).setOnClickListener {
+            val options = arrayOf("硬笔", "软笔")
+            val scores = arrayOf(10, 10)
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("练字")
+                .setItems(options) { _, which ->
+                    val score = scores[which]
+                    incrementScore(score)
+                    // 根据选项更新点击次数
+                    when (which) {
+                        0 ->{
+                            incrementClickCount("hard_pen_click_count")  // 硬笔
+                            incrementClickCount("shufa_click_count")
+
+                        }
+                        1 -> {
+                            incrementClickCount("soft_pen_click_count")  // 软笔
+                            incrementClickCount("shufa_click_count")
+                        }
+                    }
+                }
+                .show()
+        }
+
+
+
+    private fun updateTime() {
+        val calendar = Calendar.getInstance()
+        val hourOfDay = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+        val second = calendar.get(Calendar.SECOND)
+        val amPm = if (hourOfDay < 12) "上午" else "下午"
+        val hour = if (hourOfDay % 12 == 0) 12 else hourOfDay % 12
+        val timeText = String.format("%02d:%02d:%02d", hour, minute, second)
+        val dateText = getCurrentDate()
+
+        amPmLabel.text = amPm
+        timeLabel.text = timeText
+        dateLabel.text = dateText
+
+        if (dateText != currentDate) {
+            currentDate = dateText
+            dailyScore = 0
+            hasClaimedTodayReward = false
+            dailyRewardStartTime = -1L
+            rewardContainer.removeAllViews()
+            pendingRewards.clear()
+            updateScoreDisplays()
+            saveData()
+        }
+    }
+
+
+        // 每个选项的点击次数键名
+        private val option1ClickCount = "option_1_click_count"
+        private val option2ClickCount = "option_2_click_count"
+        private val option3ClickCount = "option_3_click_count"
+        private val taskClickCount = "task_click_count"
+
+
+        // 课程选项点击次数
+        private val mathClickCount = "math_click_count"
+        private val english_courseClickCount = "english_course_click_count"
+        private val computer_courseClickCount = "computer_click_count"
+        private val englishClickCount = "english_click_count"
+        private val language_ClickCount = "language_click_count"
+
+
+        // 代码选项点击次数
+        private val webClickCount = "web_click_count"
+        private val leetClickCount = "leet_click_count"
+        private val codeClickCount = "code_click_count"
+
+
+        // 技能选项点击次数
+        private val chineseMedicineClickCount = "chinese_medicine_click_count"
+        private val signLanguageClickCount = "sign_language_click_count"
+        private val editingClickCount = "editing_click_count"
+        private val photoshopClickCount = "photoshop_click_count"
+        private val communicationClickCount = "communication_click_count"
+        private val paintingClickCount = "painting_click_count"
+        private val skillClickCount = "skill_click_count"
+
+
+        // 背诵选项点击次数
+        private val englishReciteClickCount = "english_recite_click_count"
+        private val chineseReciteClickCount = "chinese_recite_click_count"
+
+        // 作息选项点击次数
+        private val wakeUpClickCount = "wake_up_click_count"
+        private val sleepEarlyClickCount = "sleep_early_click_count"
+        private val tidyUpClickCount = "tidy_up_click_count"
+        private val showerClickCount = "shower_click_count"
+        private val zuoxiClickCount = "zuoxi_click_count"
+
+        // 运动选项点击次数
+        private val baDuanJinClickCount = "ba_duan_jin_click_count"
+        private val runningClickCount = "running_click_count"
+        private val swimmingClickCount = "swimming_click_count"
+        private val ballGamesClickCount = "ball_games_click_count"
+        private val fitnessClickCount = "fitness_click_count"
+        private val yundongClickCount = "yundong_click_count"
+
+
+
+    // 练字选项点击次数
+    private val hardPenClickCount = "hard_pen_click_count"
+    private val softPenClickCount = "soft_pen_click_count"
+    private val lianziPenClickCount = "soft_pen_click_count"
+

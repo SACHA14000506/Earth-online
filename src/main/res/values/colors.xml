@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<!--&lt;!&ndash; Primary color &ndash;&gt;-->
+<!--<color name="colorPrimary">#76AFDC</color>-->
+    <color name="colorPrimaryVariant">#7DB7EB</color>
+    <color name="button_pressed_color">#42627C</color>
+    <color name="buffer">#6090b8</color>
+
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="light_green">#90EE90</color>
+    <color name="windowBackground">#f3d8c3</color>
+    <color name="RED">#7E041D</color>
+    <color name="REDP">#540312</color>
+    <color name="orangeP">#6F3324</color>
+    <color name="orange">#b7553c</color>
+    <color name="GOLD">#C28840</color>
+    <color name="GREEN">#4d613c</color>
+    <color name="banboo">#78a355</color>
+    <color name="banboo0">#84a73f</color>
+    <color name="ganlanshi">#b2cf87</color>
+    <color name="yinse">#94a1b2</color>
+    <color name="orangelight">#C7E7998B</color>
+    <color name="lightyellow">#F8EEE7</color>
+    <color name="tee">#765a34</color>
+    <color name="dark_yellow">#7E6015</color>
+
+
+
+
+
+</resources>

@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/reward_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="奖励内容"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingEnd="8dp" />
+
+    <Button
+        android:id="@+id/claim_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_orange"
+        android:text="领取"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#f3d8c3"
+        />
+</LinearLayout>

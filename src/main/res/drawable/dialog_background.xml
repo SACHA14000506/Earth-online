@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E2D5D5" /> <!-- 设置背景色 -->
+    <corners android:radius="16dp" /> <!-- 设置圆角 -->
+    <!-- 可选：如果需要控制形状的大小，可以使用 padding -->
+    <padding
+        android:left="30dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+</shape>

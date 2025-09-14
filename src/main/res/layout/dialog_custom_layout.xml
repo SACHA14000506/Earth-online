@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 自定义标题 -->
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="课程"
+        android:textSize="20sp"
+        android:textColor="#000000" /> <!-- 默认标题颜色 -->
+
+    <!-- 你可以在这里添加其他的视图组件 -->
+
+</LinearLayout>

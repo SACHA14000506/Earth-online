@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">地球Online</string>
+    <string name="title_home">Score</string>
+    <string name="title_target">Target</string>
+    <string name="title_dashboard">Date</string>
+    <string name="title_notifications">Achievement</string>
+</resources>
