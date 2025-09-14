@@ -176,7 +176,7 @@ class HomeFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.task_button).setOnClickListener {
             val options = arrayOf("1小时", "2小时", "3小时")
-            val scores = arrayOf(10, 20, 300)
+            val scores = arrayOf(10, 20, 30)
 
             val builder = AlertDialog.Builder(requireContext())
                 .setTitle("任务")
